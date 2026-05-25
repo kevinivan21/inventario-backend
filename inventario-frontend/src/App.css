@@ -1,0 +1,596 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.contenedor {
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  color: #1f2937;
+}
+
+.panel {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.formulario {
+  background: white;
+  padding: 20px;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.formulario input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.formulario button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tabla-contenedor {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #1f2937;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.btn-eliminar {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.formulario h2,
+.tabla-contenedor h2 {
+  color: #1f2937;
+  text-align: center;
+}
+.btn-editar {
+  background: #f59e0b;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+.buscador {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0 18px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.login-contenedor {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f8;
+}
+
+.login-card {
+  background: white;
+  width: 350px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.login-card h1 {
+  margin-bottom: 5px;
+}
+
+.login-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.error-login {
+  display: block;
+  margin-top: 12px;
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barra-superior button {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.usuario-activo {
+  text-align: center;
+  color: #374151;
+}
+.login-card h1 {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.login-card p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #555;
+  text-align: center;
+}
+.stock-bajo {
+  background-color: #fee2e2;
+}
+
+.alerta-stock {
+  color: #dc2626;
+  font-weight: bold;
+  margin-left: 8px;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.card-dashboard {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-dashboard h3 {
+  margin: 0 0 8px 0;
+  color: #1f2937;
+  font-size: 16px;
+}
+
+.card-dashboard p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563eb;
+}
+.historial {
+  margin-top: 25px;
+}
+.historial {
+  margin-top: 25px;
+  width: 100%;
+}
+
+.historial table {
+  width: 100%;
+}
+
+.panel {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.tabla-contenedor {
+  flex: 1;
+  min-width: 650px;
+}
+.entrada {
+  background: #dcfce7;
+  color: #166534;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.salida {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.ajuste {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.btn-pdf {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.btn-pdf:hover {
+  background: #15803d;
+}
+.btn-excel {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.btn-excel:hover {
+  background: #1d4ed8;
+}
+.graficas {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.grafica-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 550px;
+  height: 420px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.imagen-producto {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.contenedor-imagen {
+  position: relative;
+  display: inline-block;
+}
+
+.preview-imagen {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 80px;
+  z-index: 1000;
+  background: white;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
+
+.imagen-preview-grande {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.contenedor-imagen:hover .preview-imagen {
+  display: block;
+}
+input[type="file"]{
+  width: 100%;
+  padding: 10px;
+  background: #3a3a3a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario input,
+.formulario button{
+  width: 100%;
+}
+.filtro-categoria{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.paginacion button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.paginacion button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.paginacion span {
+  font-weight: bold;
+}
+.oscuro {
+  background: #111827;
+  color: white;
+  min-height: 100vh;
+}
+
+.oscuro h1,
+.oscuro h2,
+.oscuro h3,
+.oscuro p,
+.oscuro .usuario-activo {
+  color: white;
+}
+
+.oscuro .tabla-contenedor,
+.oscuro .formulario,
+.oscuro .card-dashboard,
+.oscuro .grafica-card {
+  background: #1f2937;
+  color: white;
+}
+
+.oscuro table {
+  background: #1f2937;
+  color: white;
+}
+
+.oscuro td {
+  background: #374151;
+  color: white;
+}
+
+.oscuro th {
+  background: #020617;
+  color: white;
+}
+
+.oscuro input,
+.oscuro select {
+  background: #374151;
+  color: white;
+  border: 1px solid #4b5563;
+}
+
+.oscuro .stock-bajo td {
+  background: #7f1d1d;
+}
+
+.oscuro .buscador::placeholder {
+  color: #d1d5db;
+}
+.oscuro .barra-superior button {
+  background: #2563eb;
+}
+
+.oscuro .btn-eliminar {
+  background: #dc2626;
+}
+
+.oscuro .btn-editar {
+  background: #f59e0b;
+}
+
+.oscuro .btn-pdf {
+  background: #16a34a;
+}
+
+.oscuro .btn-excel {
+  background: #2563eb;
+}
+
+.oscuro .paginacion span {
+  color: white;
+}
+
+.oscuro .preview-imagen {
+  background: #1f2937;
+}
+
+.oscuro .login-card {
+  background: #1f2937;
+  color: white;
+}
+
+.oscuro .login-card input {
+  background: #374151;
+  color: white;
+  border: 1px solid #4b5563;
+}
+.usuarios-panel {
+  width: 100%;
+}
+
+.form-usuario {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-usuario input,
+.form-usuario select,
+.form-usuario button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-usuario button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .contenedor {
+    padding: 15px;
+  }
+
+  .barra-superior {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .barra-superior h1 {
+    font-size: 34px;
+  }
+
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .panel {
+    flex-direction: column;
+  }
+
+  .formulario {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tabla-contenedor {
+    min-width: 0;
+    width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+  }
+
+  table {
+    min-width: 750px;
+  }
+
+  .form-usuario {
+    grid-template-columns: 1fr;
+  }
+
+  .graficas {
+    flex-direction: column;
+  }
+
+  .grafica-card {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .barra-superior h1 {
+    font-size: 28px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .card-dashboard p {
+    font-size: 22px;
+  }
+
+  .btn-pdf,
+  .btn-excel {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .buscador,
+  .filtro-categoria {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .login-card {
+    width: 90%;
+  }
+}
