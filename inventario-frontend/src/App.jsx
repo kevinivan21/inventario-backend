@@ -54,7 +54,7 @@ const [idUsuarioEditando, setIdUsuarioEditando] = useState(null);
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8080/api/usuarios/login", {
+      const response = await fetch("https://inventario-backend-p270.onrender.com/api/usuarios/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(login),
@@ -80,19 +80,19 @@ const [idUsuarioEditando, setIdUsuarioEditando] = useState(null);
   };
 
   const cargarProductos = async () => {
-    const response = await fetch("http://localhost:8080/api/productos");
+    const response = await fetch("https://inventario-backend-p270.onrender.com/api/productos");
     const data = await response.json();
     setProductos(data);
   };
 
   const cargarMovimientos = async () => {
-    const response = await fetch("http://localhost:8080/api/movimientos");
+    const response = await fetch("https://inventario-backend-p270.onrender.com/api/movimientos");
     const data = await response.json();
     setMovimientos(data);
   };
 
   const cargarUsuarios = async () => {
-    const response = await fetch("http://localhost:8080/api/usuarios");
+    const response = await fetch("https://inventario-backend-p270.onrender.com/api/usuarios");
     const data = await response.json();
     setUsuarios(data);
   };
@@ -128,8 +128,8 @@ const [idUsuarioEditando, setIdUsuarioEditando] = useState(null);
     e.preventDefault();
 
     const url = editando
-      ? `http://localhost:8080/api/productos/${idEditando}`
-      : "http://localhost:8080/api/productos";
+      ? `https://inventario-backend-p270.onrender.com/api/productos/${idEditando}`
+      : "https://inventario-backend-p270.onrender.com/api/productos";
 
     const metodo = editando ? "PUT" : "POST";
 
@@ -144,7 +144,7 @@ const [idUsuarioEditando, setIdUsuarioEditando] = useState(null);
     if (editando) {
       toast.info("Producto actualizado");
 
-      await fetch("http://localhost:8080/api/movimientos", {
+      await fetch("https://inventario-backend-p270.onrender.com/api/movimientos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -156,7 +156,7 @@ const [idUsuarioEditando, setIdUsuarioEditando] = useState(null);
     } else {
       toast.success("Producto agregado");
 
-      await fetch("http://localhost:8080/api/movimientos", {
+      await fetch("https://inventario-backend-p270.onrender.com/api/movimientos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -198,8 +198,8 @@ const [idUsuarioEditando, setIdUsuarioEditando] = useState(null);
   e.preventDefault();
 
   const url = editandoUsuario
-    ? `http://localhost:8080/api/usuarios/${idUsuarioEditando}`
-    : "http://localhost:8080/api/usuarios";
+    ? `https://inventario-backend-p270.onrender.com/api/usuarios/${idUsuarioEditando}`
+    : "https://inventario-backend-p270.onrender.com/api/usuarios";
 
   const metodo = editandoUsuario ? "PUT" : "POST";
 
@@ -262,7 +262,7 @@ const editarUsuario = (u) => {
 
   if (!confirmar) return;
 
-  await fetch(`http://localhost:8080/api/usuarios/${id}`, {
+  await fetch(`https://inventario-backend-p270.onrender.com/api/usuarios/${id}`, {
     method: "DELETE",
   });
 
